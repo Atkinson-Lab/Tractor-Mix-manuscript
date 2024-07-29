@@ -39,6 +39,8 @@ XXXXXX NEED TO WRITE XXXXXX
 `ADMIXTURE.sh`:  
 
 
+&nbsp;  
+&nbsp;  
 
 
 ### `PHASE` phasing UKBB data  
@@ -47,13 +49,20 @@ XXXXXX NEED TO WRITE XXXXXX
 Split UKBB vcf file by 22 chromosomes. This helps parallelization for downstream analysis 
 
 `run_shapeit5.sh`:  
-Phasing each chromosome with Shapeit5. First use bcftools to subset TGP (reference) AFR-EUR samples, then compute allele count (AC) and indexing both TGP and UKBB data. Then perform phasing, which outputs a bcf file. Then convert bcf files to vcf.gz files. 
+Phasing each chromosome with Shapeit5. First use bcftools to subset TGP (reference) AFR-EUR samples, then compute allele count (AC) and indexing both TGP and UKBB data. Then perform phasing, which outputs a bcf file. Then convert bcf files to vcf.gz files. Genetics maps downloaded from [here](https://github.com/odelaneau/shapeit4/tree/master/maps)
 
 
 
+&nbsp;  
+&nbsp;  
 
+### `LAI` local ancestry inference
 
+`run_RFMIX.sh`:  
+Perform local ancestry inference with RFmix2. Genetics maps downloaded from [here](https://github.com/odelaneau/shapeit4/tree/master/maps), and modified to match the format of RFMix2. 
 
+`TGP_AFR_EUR.tsv`:  
+The super population level label for TGP reference panel. 
 
 
 
