@@ -33,10 +33,11 @@ Pre-process TGP data. Merge 22 chromosomes, and extract variant list
 `UKBB_processing.sh`:  
 Perform LD pruning for UKBB data, and extract variant list
 
-`intersect_vars.R`:
-XXXXXX NEED TO WRITE XXXXXX
+`intersect_vars.R`:  
+Intersect shared variants in TGP and UKBB
 
 `ADMIXTURE.sh`:  
+Extract shared variants for UKBB and TGP, then merge them and convert them to vcf files, then run ADMIXTURE
 
 
 &nbsp;  
