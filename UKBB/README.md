@@ -71,17 +71,21 @@ The super population level label for TGP reference panel.
 
 ### `TRACTOR` Tractor-Mix run 
 
+&nbsp;  
+
 ##### Prepare ancestry specific dosage files (for Tractor-Mix)
 
 `run_ExtractTracts.sh`:  
 Allocate alleles to each local ancestry. It takes the `msp` files and phased `vcf` files as input, and produce `anc*.dosage.txt` and `anc*.hapcount.txt`. 
+
+&nbsp;  
 
 ##### Prepare bed files for each chromosomes (for GMMAT)
 
 `run_split_convert_bed.sh`
 Convert the original VCF to bim/bam/fam, then split the file by chromosome. The splited chromosome files are used for GMMAT run
 
-
+&nbsp;  
 
 ##### Prepare PC-Air and PC-Relate  
 
@@ -91,13 +95,14 @@ First make a `king` file from the pruned UKBB vcf file; then convert vcf file to
 `make_PC_GRM_from_GENESIS.R`, `run_make_PC_GRM_from_GENESIS.sh`:  
 Use `bed/bim/fam` and `king` as inputs, run GENESIS to compute PC-Air and PC-Relate
 
+&nbsp;  
 
 ##### Prepare Null models
 
 `fit_Nulls.R`:  
 Harmonize phenotype dataframe, then fit null models with PC-Air and PC-Relate for TC (total cholestral), LDL (low-density lipoprotein), SCA (sickle cell anemia)
 
-
+&nbsp;  
 
 ##### Run score test 
 
@@ -111,8 +116,17 @@ Run Tractor-Mix for 3 phenotypes.
 Run GWAS for SCA, but also count minor alleles for each variant
 
 
+&nbsp;  
+&nbsp;  
 
 
+### Tractor-Mix source code 
+
+`TractorMix.score.R`: flagship code 
+
+`TractorMix.score.AC.R`: compute allele counts while conducting Score test 
+
+`TractorMix.wald.R`: the wald test
 
 
 
